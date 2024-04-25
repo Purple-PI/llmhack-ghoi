@@ -122,13 +122,20 @@ class Agent:
         return response.choices[0].message.content
     
     def feedback_register_fn(self, logs):
-        "STEP 3: ask tool to use"
+        "STEP 3: ask register to user"
         params = feedback_register()
         response = self.api(params)
         tool_call = response.choices[0].message.tool_calls[0]
         return tool_call.function_name
         
 
+    def feedback_register_classification_fn(self, logs):
+        "STEP 4: "
+        params = feedback_register_classification()
+        response = self.api(params)
+        tool_call = response.choices[0].message.tool_calls[0]
+        return tool_call.function_name
+        
     
     def loop(self):
         # get logs from previous days
@@ -138,8 +145,9 @@ class Agent:
         #...
         # check if tool_name, time is in th routine
         # If yes=> Prompt feedback
-        user_response = self.feedback_todo_fn()
+        user_response = self.feedback_todo_fn() 
         tool_name, time = self.feedback_register_fn()
+        self.feedback_register_classification_fn()
 
         #...
         # enregistrer action?
