@@ -1,0 +1,5 @@
+A user lives in a home and has been observed through a smart home system. Below is a log of today observation:
+{logs_current_day}
+
+You previously asked the user if she/he wants you to trigger the following action: {action}.
+Now, you have to ask the user if the user wants you to do this action autonomously next time it seems relevant.

@@ -1,0 +1,58 @@
+[
+	{
+		"type": "function",
+		"function": {
+		    "name": "setalarm",
+		    "description": "The robot will enable the alarm to wake up the user at the right time.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "heatoven",
+		    "description": "The robot will turn on the oven to cook for the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "preparecoffee",
+		    "description": "The robot will prepare prepare coffee to the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "listeningmusic",
+		    "description": "The robot will turn on the music for the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "watchingtv",
+		    "description": "The robot will turn on the TV for the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "readnews",
+		    "description": "The robot will read newsfeed to the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "orderfood",
+		    "description": "The robot will order food to the user.",
+		    "parameters": {}
+		}
+	}
+]

@@ -1,0 +1,18 @@
+[
+	{
+		"type": "function",
+		"function": {
+		    "name": "yes",
+		    "description": "The user agree with the question asked",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "no",
+		    "description": "The user disagree with the question asked",
+		    "parameters": {}
+		}
+	}
+]

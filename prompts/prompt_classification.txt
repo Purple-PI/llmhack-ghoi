@@ -1,0 +1,21 @@
+A user lives in a home and has been observed through a smart home system. Below is a log of two previous days from their daily life:
+
+DAY 0
+{logs_pp_day}
+
+DAY 1
+{logs_p_day}
+
+Here is the log of today:
+
+DAY 2 (current day)
+{logs_current_day}
+
+Tools that can be leverage by the smart home system to help the user:
+- trigger off/on : light, music, start coffee machine, vacuum cleaner, heat oven, 
+- set alarm clock, set table, cook, clean table
+
+Based on the log of observations provided, which tools could the robot use to best assist the person? Consider the patterns and needs displayed in the log to make your predictions.
+You have to anticipate what the user may want around {time} today.
+
+Write None, if no tools could be enable, else write the tool name. Don't comment, don't justify.

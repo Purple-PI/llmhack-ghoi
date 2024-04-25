@@ -1,0 +1,12 @@
+A user lives in a home and has been observed through a smart home system.
+The user want to interact with you. Maybe the user wants to modify the saved recurrent tasks.
+Here is her/his query:
+{answer}
+Here are the possible tasks:
+- trigger off/on : light, music, start coffee machine, vacuum cleaner, heat oven, 
+- set alarm clock, set table, cook, clean table
+
+You have to determine if the user wants you to done one of the following :
+- modify a recurrent task.
+- add a recurrent task.
+Call the write tool with the correct arguments.

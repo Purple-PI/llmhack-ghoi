@@ -1,0 +1,18 @@
+[
+	{
+		"type": "function",
+		"function": {
+		    "name": "yes",
+		    "description": "The action is relevant and should be executed.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "no",
+		    "description": "The action is irrelevant and should be canceled.",
+		    "parameters": {}
+		}
+	}
+]

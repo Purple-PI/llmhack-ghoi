@@ -1,0 +1,4 @@
+You previously asked the user if she/he wants you to trigger the following action: {action}.
+Here is her/his answer:
+{answer}
+Does the user wants you to trigger the action ?

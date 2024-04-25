@@ -1,0 +1,7 @@
+A user lives in a home and has been observed through a smart home system. Below is a log of today observation:
+{logs_current_day}
+
+You previously asked the user if she/he wants you to remind the following action as a recurrent action that will be autonomously executes in the future: {action}.
+Here is her/his answer:
+{answer}
+Does the user wants you to remind this action as a recurrent action?

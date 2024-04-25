@@ -1,0 +1,6 @@
+A user lives in a home and has been observed through a smart home system. Below is a log of today observation:
+{logs_current_day}
+
+Ask the user if the user want you to trigger the following action right now:
+{action}
+Write only the question to ask to the user, no comment, only the question.
