@@ -39,7 +39,7 @@ def feedback_todo(**entry):
     """
     prompt = mapping_prompt['prompt_feedback_todo'].format(**entry)
     messages = [ChatMessage(role= "user", content=prompt)]
-    return messages
+    return  {"messages": messages}
 
 def feedback_todo_classification(**entry):
     """
@@ -61,7 +61,7 @@ def feedback_register(**entry):
     """
     prompt = mapping_prompt['prompt_feedback_register'].format(**entry)
     messages = [ChatMessage(role= "user", content=prompt)]
-    return messages
+    return {"messages": messages}
 
 def feedback_register_classification(**entry):
     """

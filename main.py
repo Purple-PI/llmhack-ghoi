@@ -4,8 +4,9 @@ from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 import functools
 import datetime
-
+from prompts.fun_prompt import classification, feedback_register, feedback_register_classification, feedback_todo, feedback_todo_classification
 import json
+
 PTCLS = 'a{}b{}'
 def flatten_dict(d, parent_key='', sep='_'):
     items = []
@@ -17,8 +18,8 @@ def flatten_dict(d, parent_key='', sep='_'):
             items.append((new_key, v))
     return dict(items)
 
+
 class Agent:
-    
     def __init__(self, model_name, client):
         self.client = client
         self.model_name = model_name
@@ -107,26 +108,40 @@ class Agent:
         response = self.api(prompt)
 
 
-    def identify_tool(self, logs):
+    def classification_fn(self, logs):
         "STEP 1 : identify tool to use"
-        log_text = flatten_dict(logs)
-        # prompt_for_api = .format(log_text)
-        response = self.api(messages=prompt_for_api)
+        params = classification()
+        response = self.api(params)
+        tool_call = response.choices[0].message.tool_calls[0]
+        return tool_call.function_name
+    
+    def feedback_todo_fn(self, logs):
+        "STEP 2: ask tool to use"
+        params = feedback_todo()
+        response = self.api(params)
+        return response.choices[0].message.content
+    
+    def feedback_register_fn(self, logs):
+        "STEP 3: ask tool to use"
+        params = feedback_register()
+        response = self.api(params)
         tool_call = response.choices[0].message.tool_calls[0]
         return tool_call.function_name
         
 
+    
     def loop(self):
         # get logs from previous days
         logs = self.get_logs()
         # Prompt classification (should call a fct ?)
-        prompt = self.model_action_cls(logs)
-        
+        # = self.classification_fn(logs)
+        #...
         # check if tool_name, time is in th routine
         # If yes=> Prompt feedback
-        user_response = self.ask_user_tool(tool_name, time)
-        tool_name, time = self.prompt_feedback(user_response)
-        user_response = self.ask_user_register(tool_name, time)
+        user_response = self.feedback_todo_fn()
+        tool_name, time = self.feedback_register_fn()
+
+        #...
         # enregistrer action?
         pass
     
@@ -169,14 +184,12 @@ class Agent:
     def get_user_response(self, message):
         return 
 
-    def api(self, messages):
-        messages = [ChatMessage(role="user", content=messages)]
+    def api(self, params):
         response = client.chat(
             model=self.model_name,
-            messages=messages,
-            tools=self.tools,
-            tool_choice="auto"
+            **params
         )
+
         return response
         
     def add_routine(self, routine_name, routine_time):
@@ -229,3 +242,4 @@ if __name__ == "__main__":
     model = "mistral-large-latest"
     client = MistralClient(api_key=api_key)
     agent = Agent(model_name=model, client=client)
+
