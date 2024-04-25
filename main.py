@@ -7,13 +7,23 @@ import datetime
 
 import json
 PTCLS = 'a{}b{}'
+def flatten_dict(d, parent_key='', sep='_'):
+    items = []
+    for k, v in d.items():
+        new_key = f"{parent_key}{sep}{k}" if parent_key else k
+        if isinstance(v, dict):
+            items.extend(flatten_dict(v, new_key, sep=sep).items())
+        else:
+            items.append((new_key, v))
+    return dict(items)
+
 class Agent:
     
     def __init__(self, model_name, client):
         self.client = client
         self.model_name = model_name
         self.file_path = 'routine.json'
-
+        self.log_path = 'logs.json'
         self.tools = [
             {
                 "type": "function",
@@ -38,33 +48,43 @@ class Agent:
             {
                 "type": "function",
                 "function": {
-                    "name": "add_routine",
-                    "description": "Add a routine to the calendar",
+                    "name": "del_routine",
+                    "description": "Delete a routine from the calendar",
                     "parameters": {
                          "type": "object",
                          "properties": {
                              "routine_name": {
                                  "type": "string",
-                                 "description": "name of the routine to add",
+                                 "description": "name of the routine to delete",
                              },
                              "routine_time": {
                                  "type": "string",
                                  "description": "time to exectute routine",
                              }
                          },
-                         "required": ["routine_name", "routine_time"],
+                         "required": ["routine_name"],
                     },}
+            },
+            {
+                "type": "function",
+                "function": {
+                    "name": "do_nothing",
+                    "description": "do nothing",
+                    "parameters": {},}
             }
             ]
 
         self.names_to_functions = {
-        'add_routine': functools.partial(self.add_routine)
+        'add_routine': functools.partial(self.add_routine),
+        'del_routine': functools.partial(self.del_routine),
+        'do_nothing': functools.partial(self.do_nothing),
+
         }
+        self.api(messages = "Can you add make me a coffee every morning at 10:00? ")
+        #self.loop()
 
-
-        self.api(message = "Can you add makeme a coffee every morning at 10:00? ")
-        self.loop()
-        
+    def do_nothing(self):
+        pass
 
     def load_next_routine(self):
         current_time = datetime.datetime.now().strftime("%H:%M")  # Current time in "HH:MM" format
@@ -87,27 +107,36 @@ class Agent:
         response = self.api(prompt)
 
 
+    def identify_tool(self, logs):
+        "STEP 1 : identify tool to use"
+        log_text = flatten_dict(logs)
+        # prompt_for_api = .format(log_text)
+        response = self.api(messages=prompt_for_api)
+        tool_call = response.choices[0].message.tool_calls[0]
+        return tool_call.function_name
+        
+
     def loop(self):
         # get logs from previous days
         logs = self.get_logs()
         # Prompt classification (should call a fct ?)
-        tool_name, time = self.model_action_cls(logs)
-        # check if tool_name, time is in th routine
+        prompt = self.model_action_cls(logs)
         
+        # check if tool_name, time is in th routine
         # If yes=> Prompt feedback
         user_response = self.ask_user_tool(tool_name, time)
         tool_name, time = self.prompt_feedback(user_response)
         user_response = self.ask_user_register(tool_name, time)
-        user_response
-        
-
         # enregistrer action?
         pass
     
     def get_logs(self):
-        pass
-    
-
+        if os.path.exists(self.log_path):
+            with open(self.log_path, "r") as file:
+                data = json.load(file)
+            return data
+        else:
+            return []
 
     
     def ask_user(self, message):
@@ -116,8 +145,10 @@ class Agent:
 
 
 
-    def fct_call(self, action, time):
-        pass
+    def fct_call(self, message):
+        tool_call = message.choices[0].message.tool_calls[0]
+        function_result = self.names_to_functions[tool_call.function_name]
+        
 
 
         
@@ -135,8 +166,8 @@ class Agent:
             print("\nfunction_name: ", function_name, "\nfunction_params: ", function_params)
             function_result = self.names_to_functions[function_name](**function_params)
             
-    def get_user_response(self):
-        return 'wait'
+    def get_user_response(self, message):
+        return 
 
     def api(self, messages):
         messages = [ChatMessage(role="user", content=messages)]
