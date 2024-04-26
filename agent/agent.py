@@ -49,9 +49,9 @@ class Agent:
         tool_call = response.choices[0].message.tool_calls[0]
         return tool_call.function.name
 
-    def feedback_register_fn(self, logs, action):
+    def feedback_register_fn(self, logs, action, output, user_input):
         "STEP 4: ask a confirmation to register action to user"
-        entry = {"logs_day": logs[-1], "action": action}
+        entry = {"logs_day": logs[-1], "action": action, 'output': output, 'user_input':user_input }
         params = feedback_register(**entry)
         response = self.api(**params)
         return response.choices[0].message.content
@@ -84,6 +84,12 @@ class Agent:
         # get logs from previous days
         _, formatted_logs = self.get_logs()
         str_timestamp = self.timestamp.strftime("%H:%M")
+        action = self.routine.tick_routine()
+        if action != None:
+            action_to_execute = self.auto_evaluation(logs_autotask, formatted_logs, action, str_timestamp)
+            # check if action is do nothing keep action in the stack
+            return action_to_execute
+        
         action_to_execute = self.classification_fn(formatted_logs, str_timestamp)
         print(action_to_execute)
         if action_to_execute == "do_nothing":
@@ -92,7 +98,7 @@ class Agent:
         print(output_user)
         input_user = input('Answer: ')
         execute_action = self.feedback_todo_classification_fn(action_to_execute, input_user)
-        output_user = self.feedback_register_fn(formatted_logs, action_to_execute)
+        output_user = self.feedback_register_fn(formatted_logs, action_to_execute, output_user, input_user) 
         print(output_user)
         input_user = input('Answer: ')
         register_action = self.feedback_register_classification_fn(action_to_execute, input_user)
@@ -100,7 +106,7 @@ class Agent:
             #TO UPDATE: replace parameters with the one from tools
             self.routines.add_routine(action_to_execute, str_timestamp)
         if execute_action == 'yes':
-            return execute_action
+            return action_to_execute
 
     
     def get_logs(self, max_num_days=3):

@@ -398,6 +398,46 @@
             "event": "prepareBreakfast",
             "time": "11:00",
             "lifecycle": "start"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "11:03",
+            "lifecycle": "run"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:03",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:03",
+            "lifecycle": "start"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:09",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "watchingtv",
+            "time": "11:09",
+            "lifecycle": "start"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:32",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "washing",
+            "time": "12:33",
+            "lifecycle": "start"
+        },
+        {
+            "event": "washing",
+            "time": "12:42",
+            "lifecycle": "complete"
         }
     ]
 ]

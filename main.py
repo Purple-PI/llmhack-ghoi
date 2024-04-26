@@ -32,5 +32,5 @@ if __name__ == "__main__":
         client = MistralClient(api_key=api_key)
         cutoff_fun(log_filepath, new_log_filepath, f"{str(10+k)}:00", max_num_days=3)
         agent = Agent(model_name=model, client=client, log_path=new_log_filepath)
-        agent.tick(f"{str(10+k)}:00")
-        
+        action = agent.tick(f"{str(10+k)}:00")
+        print(f'Current action: {action}')
