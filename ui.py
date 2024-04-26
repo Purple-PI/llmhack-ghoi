@@ -72,12 +72,19 @@ if __name__ == "__main__":
         "orderFood": "orderfood.mp4"
     }
 
+    def next_event_fn():
+        global i
+        while True:
+            i += 1
+            if logs[i]["event"] in event_to_video or i >= len(logs):
+                break
+        return "data/videos/" + event_to_video[logs[i]["event"]], logs[i]["time"], []
 
     with gr.Blocks() as app:
-        date = gr.Textbox(label="Time", interactive=False, value="11:30")
+        date = gr.Textbox(label="Time", interactive=False, value=logs[i]["time"])
 
         video = gr.Video(
-            value="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+            value="data/videos/" + event_to_video[logs[i]["event"]],
             autoplay=True,
             height=240
         )
@@ -92,7 +99,7 @@ if __name__ == "__main__":
             msg = gr.Audio(sources=["microphone"], scale=5)
             send_button = gr.Button("Send 🚀", scale=1)
 
-        next_button = gr.Button("Go to next day ➡️")
+        next_button = gr.Button("Go to event day ➡️")
 
         # Logic
         video.change(vlm_output_fn, inputs=video, outputs=vlm_output)
@@ -100,5 +107,6 @@ if __name__ == "__main__":
 
         vlm_output.change(proactive_interaction_agent_fn, inputs=[vlm_output, chatbot], outputs=chatbot)
         send_button.click(human_answer_to_llm_fn, inputs=[msg, chatbot], outputs=chatbot)
+        next_button.click(next_event_fn, inputs=None, outputs=[video, date, chatbot])
     app.launch()
 
