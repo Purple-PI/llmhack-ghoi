@@ -2,7 +2,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "setalarm",
+		    "name": "set_alarm",
 		    "description": "The robot will enable the alarm to wake up the user at the right time.",
 		    "parameters": {}
 		}
@@ -10,7 +10,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "heatoven",
+		    "name": "heat_oven",
 		    "description": "The robot will turn on the oven to cook for the user.",
 		    "parameters": {}
 		}
@@ -18,7 +18,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "preparecoffee",
+		    "name": "prepare_coffee",
 		    "description": "The robot will prepare prepare coffee to the user.",
 		    "parameters": {}
 		}
@@ -26,7 +26,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "listeningmusic",
+		    "name": "listening_music",
 		    "description": "The robot will turn on the music for the user.",
 		    "parameters": {}
 		}
@@ -34,7 +34,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "watchingtv",
+		    "name": "watching_tv",
 		    "description": "The robot will turn on the TV for the user.",
 		    "parameters": {}
 		}
@@ -42,7 +42,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "readnews",
+		    "name": "read_news",
 		    "description": "The robot will read newsfeed to the user.",
 		    "parameters": {}
 		}
@@ -50,8 +50,16 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "orderfood",
+		    "name": "order_food",
 		    "description": "The robot will order food to the user.",
+		    "parameters": {}
+		}
+	},
+	{
+		"type": "function",
+		"function": {
+		    "name": "do_nothing",
+		    "description": "The robot should not do anything particular.",
 		    "parameters": {}
 		}
 	}

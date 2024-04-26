@@ -9,9 +9,7 @@ TIME_CUTOFF = 1800
 
 model_name = "mistral-large-latest"
 
-client = MistralClient(
-                        api_key=os.environ.get("MISTRAL_API_KEY"),
-                    )
+client = MistralClient(api_key=os.environ.get("MISTRAL_API_KEY"))
 
 with open(EXAMPLE_FILENAME, 'r') as file_json:
     example_content = json.load(file_json)

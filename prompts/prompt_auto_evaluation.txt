@@ -1,4 +1,6 @@
-A user lives in a home and has been observed through a smart home system. Below is a log of today observation:
+A user lives in a home and has been observed through a smart home system. Below is a log of yesterday observation
+{logs_autotask}
+Below is a log of today observation:
 {logs_current_day}
 
 Yesterday, you register the following action as a recurrent action around the current time ({time}): {action}.

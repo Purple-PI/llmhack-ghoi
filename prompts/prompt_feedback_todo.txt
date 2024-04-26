@@ -1,5 +1,5 @@
 A user lives in a home and has been observed through a smart home system. Below is a log of today observation:
-{logs_current_day}
+{logs_day}
 
 Ask the user if the user want you to trigger the following action right now:
 {action}

@@ -9,13 +9,9 @@ DAY 1
 Here is the log of today:
 
 DAY 2 (current day)
-{logs_current_day}
+{logs_day}
 
-Tools that can be leverage by the smart home system to help the user:
-- trigger off/on : light, music, start coffee machine, vacuum cleaner, heat oven, 
-- set alarm clock, set table, cook, clean table
-
-Based on the log of observations provided, which tools could the robot use to best assist the person? Consider the patterns and needs displayed in the log to make your predictions.
+Based on the log of observations provided, which function could the robot use to best assist the person? Consider the patterns and needs displayed in the log to make your predictions.
 You have to anticipate what the user may want around {time} today.
 
-Write None, if no tools could be enable, else write the tool name. Don't comment, don't justify.
+Don't comment, don't justify, only write the needed function.

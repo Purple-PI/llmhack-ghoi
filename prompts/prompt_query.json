@@ -1,0 +1,59 @@
+[
+   {
+      "type":"function",
+      "function":{
+         "name":"add_routine",
+         "description":"Add a routine to the calendar",
+         "parameters":{
+            "type":"object",
+            "properties":{
+               "routine_name":{
+                  "type":"string",
+                  "description":"name of the routine to add"
+               },
+               "routine_time":{
+                  "type":"string",
+                  "description":"time to execute routine"
+               }
+            },
+            "required":[
+               "routine_name",
+               "routine_time"
+            ]
+         }
+      }
+   },
+   {
+      "type":"function",
+      "function":{
+         "name":"del_routine",
+         "description":"Delete a routine from the calendar",
+         "parameters":{
+            "type":"object",
+            "properties":{
+               "routine_name":{
+                  "type":"string",
+                  "description":"name of the routine to delete"
+               },
+               "routine_time":{
+                  "type":"string",
+                  "description":"time to execute routine"
+               }
+            },
+            "required":[
+               "routine_name"
+            ]
+         }
+      }
+   },
+   {
+      "type":"function",
+      "function":{
+         "name":"do_nothing",
+         "description":"do nothing",
+         "parameters":{
+            
+         }
+      }
+   }
+]

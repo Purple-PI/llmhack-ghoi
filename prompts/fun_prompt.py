@@ -66,7 +66,6 @@ def feedback_register(**entry):
 def feedback_register_classification(**entry):
     """
     inputs:
-        "logs_day" logs of current day
         "action" action infer by classifier
         "answer" answer given by the user to AI request to trigger action
     output = tool Yes/No
@@ -78,11 +77,23 @@ def feedback_register_classification(**entry):
 def auto_evaluation(**entry):
     """
     inputs:
+        "logs_autotask" logs of the day autotask was learned
         "logs_day" logs of current day
         "action" action from the routine set
-        "timestamp" timestamp
+        "time" time
     output = tool Yes/No
     """
     prompt = mapping_prompt['prompt_auto_evaluation'].format(**entry)
     messages = [ChatMessage(role= "user", content=prompt)]
     return {"messages": messages, "tools": mapping_tools['prompt_auto_evaluation'], "tool_choice":"any"}
+
+def query(**entry):
+    """
+    inputs:
+        "user_input"
+        "time" time
+    output = tool Yes/No
+    """
+    prompt = mapping_prompt['prompt_query'].format(**entry)
+    messages = [ChatMessage(role= "user", content=prompt)]
+    return {"messages": messages, "tools": mapping_tools['prompt_query']}
