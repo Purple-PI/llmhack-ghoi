@@ -4,10 +4,11 @@ Here is the set of possible action:
 -set_alarm
 -heat_oven
 -prepare_coffee
--listening_music
 -watching_tv
 -read_news
 -order_food
+-play music
+-bring_book_to_user
 Here is an input from the user (at {time})regarding a potential reprogrammation of autonomous tasks:
 {user_input}
 Write the function to translate it to a formal query.

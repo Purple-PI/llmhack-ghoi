@@ -10,11 +10,11 @@ from prompts.fun_prompt import classification, feedback_register, feedback_regis
 from agent.routines import RoutinesManager
 
 class Agent:
-    def __init__(self, model_name, client):
+    def __init__(self, model_name, client, log_path):
         self.client = client
         self.model_name = model_name
         self.file_path = 'data/routines.json'
-        self.log_path = 'data/logs.json'
+        self.log_path = log_path
         self.timestamp = datetime.datetime.strptime("00:00", "%H:%M")
         #load routines once a day
         self.routines = RoutinesManager(self.file_path)
@@ -28,8 +28,12 @@ class Agent:
         entry = {"logs_pp_day": logs[-3], "logs_p_day": logs[-2], "logs_day": logs[-1], "time": time}
         params = classification(**entry)
         response = self.api(**params)
-        tool_call = response.choices[0].message.tool_calls[0]
-        return tool_call.function.name
+        print(response)
+        if response.choices[0].message.tool_calls:
+            tool_call = response.choices[0].message.tool_calls[0]
+            return tool_call.function.name
+        else:
+            return "do_nothing"
     
     def feedback_todo_fn(self, logs, action):
         "STEP 2: ask a confirmation to execute action to user"
@@ -107,7 +111,7 @@ class Agent:
         for day_dict_list in data[-max_num_days:]:
             day_str_list = []
             for day_entry in day_dict_list:
-                format_str = f"{day_entry['timestamp']}: {day_entry['observation']}"
+                format_str = f"{day_entry['time']}: {day_entry['event']}"
                 day_str_list.append(format_str)
             activity_log = "\n".join(day_str_list)
             format_content.append(activity_log)

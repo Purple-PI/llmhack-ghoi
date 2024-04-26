@@ -27,7 +27,7 @@ def classification(**entry):
     """
     prompt = mapping_prompt['prompt_classification'].format(**entry)
     messages = [ChatMessage(role= "user", content=prompt)]
-    return {"messages": messages, "tools": mapping_tools['prompt_classification'], "tool_choice":"any"}
+    return {"messages": messages}
 
 def feedback_todo(**entry):
     """
