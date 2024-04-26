@@ -1,0 +1,74 @@
+[
+    {
+        "event": "washing",
+        "time": "10:21"
+    },
+    {
+        "event": "shower",
+        "time": "10:25"
+    },
+    {
+        "event": "prepareBreakfast",
+        "time": "10:38"
+    },
+    {
+        "event": "prepareCoffee",
+        "time": "10:41"
+    },
+    {
+        "event": "eatingBreakfast",
+        "time": "10:43"
+    },
+    {
+        "event": "washing",
+        "time": "10:49"
+    },
+    {
+        "event": "watchingtv",
+        "time": "10:51"
+    },
+    {
+        "event": "washing",
+        "time": "13:06"
+    },
+    {
+        "event": "toilet",
+        "time": "13:06"
+    },
+    {
+        "event": "watchingtv",
+        "time": "13:38"
+    },
+    {
+        "event": "toilet",
+        "time": "14:26"
+    },
+    {
+        "event": "prepareLunch",
+        "time": "14:31"
+    },
+    {
+        "event": "eatingLunch",
+        "time": "14:42"
+    },
+    {
+        "event": "washing",
+        "time": "15:04"
+    },
+    {
+        "event": "watchingtv",
+        "time": "15:07"
+    },
+    {
+        "event": "snack",
+        "time": "20:20"
+    },
+    {
+        "event": "watchingtv",
+        "time": "20:21"
+    },
+    {
+        "event": "sleeping",
+        "time": "02:16"
+    }
+]

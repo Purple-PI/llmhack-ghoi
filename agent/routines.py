@@ -23,6 +23,9 @@ class RoutinesManager:
         self.routines = remaining_routines
         return routine_todo
 
+    def get_last_routine(self):
+        return self.routines[-1]
+
     def add_routine(self, routine_name, routine_time, logs_autotask):
         self.routines.append({"action": routine_name, "time": routine_time, "logs_autotask": logs_autotask})
         self.save_routines()

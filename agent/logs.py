@@ -9,7 +9,7 @@ class LogsManager:
             self.data = json.load(file)
 
     def add_event(self, time, event):
-        self.data[-1].append({"time": time, "event": event})
+        self.data[-1].append({"event": event, "time": time})
 
     def cutoff_fun(self, cutoff_str, max_num_days=3):
         out_content = self.data[-max_num_days:-1]
