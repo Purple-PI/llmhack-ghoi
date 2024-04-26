@@ -391,6 +391,78 @@
         {
             "timestamp": "12:00",
             "observation": "human entering in kitchen"
+        },
+        {
+            "timestamp": "12:10",
+            "observation": "set table"
+        },
+        {
+            "timestamp": "12:20",
+            "observation": "eat"
+        },
+        {
+            "timestamp": "13:00",
+            "observation": "clean"
+        },
+        {
+            "timestamp": "13:30",
+            "observation": "drink"
+        },
+        {
+            "timestamp": "14:00",
+            "observation": "work"
+        },
+        {
+            "timestamp": "15:00",
+            "observation": "human entering in living room"
+        },
+        {
+            "timestamp": "15:15",
+            "observation": "on TV"
+        },
+        {
+            "timestamp": "16:00",
+            "observation": "human entering in kitchen"
+        },
+        {
+            "timestamp": "16:10",
+            "observation": "start: vacuum cleaner"
+        },
+        {
+            "timestamp": "16:30",
+            "observation": "cook"
+        },
+        {
+            "timestamp": "17:00",
+            "observation": "set table"
+        },
+        {
+            "timestamp": "17:15",
+            "observation": "eat"
+        },
+        {
+            "timestamp": "18:00",
+            "observation": "clean"
+        },
+        {
+            "timestamp": "18:30",
+            "observation": "human entering in living room"
+        },
+        {
+            "timestamp": "18:45",
+            "observation": "play music"
+        },
+        {
+            "timestamp": "19:30",
+            "observation": "read book"
+        },
+        {
+            "timestamp": "20:00",
+            "observation": "relax on sofa"
+        },
+        {
+            "timestamp": "21:30",
+            "observation": "human entering in bedroom"
         }
     ]
 ]

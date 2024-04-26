@@ -13,5 +13,14 @@ DAY 2 (current day)
 
 Based on the log of observations provided, which function could the robot use to best assist the person? Consider the patterns and needs displayed in the log to make your predictions.
 You have to anticipate what the user may want around {time} today.
+Here is the set of possible action:
+-set_alarm: set an alarm for the user.
+-heat_oven: turn on the oven.
+-prepare_coffee: prepare coffee.
+-watching_tv: turn on tv.
+-read_news: read last news to the user.
+-order_food: order food to the user.
+-play music: play music for the user.
+-bring_book_to_user: bring a book to the user.
 
 Don't comment, don't justify, only write the needed function.
