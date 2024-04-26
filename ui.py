@@ -1,10 +1,11 @@
-import gradio as gr
 import time
 import json
 from datetime import datetime
 import os
 import logging
+import itertools
 
+import gradio as gr
 from mistralai.client import MistralClient
 
 from agent.logs import LogsManager
@@ -61,7 +62,8 @@ agent = Agent(model_name=model, client=client, logs=logs_manager)
 def vlm_output_fn(image):
     logger.info(f"Run VLM on image {image}...")
     time.sleep(5)
-    return "An image description..."
+    # return "An image description..."
+    return logs[i]['event']
 
 
 def format_objects(objects):
@@ -73,12 +75,11 @@ def format_objects(objects):
 
 
 def proactive_interaction_agent_fn(image_description, time, chat_history):
-    global agent_logs
     logger.info(f"Run LLM on image description {image_description}...")
     logs_manager.add_event(time, image_description)
     llm_answer = agent.tick(time)
     chat_history.append((None, llm_answer))
-    return chat_history, format_objects(agent_logs)
+    return chat_history, format_objects(logs_manager.data[-1])
 
 
 def speech_to_text(audio):
@@ -90,7 +91,7 @@ def speech_to_text(audio):
 def human_answer_to_llm_fn(audio, chat_history):
     global number_of_interaction, i, routines_to_display
     logger.info(f"Run speech-to-text on {audio}...")
-    human_text = speech_to_text(audio)
+    human_text = audio #speech_to_text(audio)
 
     if number_of_interaction == 0:
         llm_answer = agent.input_user_0(human_text)
@@ -107,13 +108,13 @@ def human_answer_to_llm_fn(audio, chat_history):
         if last_routine_datetime >= current_time_datetime:
             routines_to_display.append(last_routine)
     else:
-        llm_answer = "I have Nothing to say anymore"
+        llm_answer = None #"I have Nothing to say anymore"
     if llm_answer == "":
-        llm_answer = "**Nothing to do**"
+        llm_answer = None
     number_of_interaction += 1
 
     chat_history.append((human_text, llm_answer))
-    return chat_history, format_objects(routines_to_display), format_objects(agent_logs)
+    return chat_history, format_objects(routines_to_display), format_objects(logs_manager.data[-1])
 
 
 if __name__ == "__main__":
@@ -147,7 +148,8 @@ if __name__ == "__main__":
             chatbot = gr.Chatbot(scale=3)
 
         with gr.Row():
-            msg = gr.Audio(sources=["microphone"], scale=5)
+            # msg = gr.Audio(sources=["microphone"], scale=5)
+            msg = gr.Textbox(label="msg", scale=5, interactive=True)
             send_button = gr.Button("Send 🚀", scale=1)
 
         next_button = gr.Button("Go to event day ➡️")

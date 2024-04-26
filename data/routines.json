@@ -48,5 +48,19 @@
                 "event": "prepare_coffee"
             }
         ]
+    },
+    {
+        "action": "prepare_coffee",
+        "time": "08:56",
+        "logs_autotask": [
+            {
+                "event": "prepareBreakfast",
+                "time": "08:56"
+            },
+            {
+                "event": "prepare_coffee",
+                "time": "08:56"
+            }
+        ]
     }
 ]
