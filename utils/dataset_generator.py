@@ -2,6 +2,8 @@ import argparse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta
 import json
+from pprint import pprint
+
 import numpy as np
 import os
 
@@ -38,6 +40,26 @@ def sort_and_merge_lists(A, B):
         A.insert(insert_index, b)
 
     return A
+
+
+def split_list_by_event(input_list, event_name):
+    result = []
+    sublist = []
+
+    for obj in input_list:
+        sublist.append(obj)
+        if obj.get("event") == event_name:
+            if sublist:
+                result.append(sublist)
+                sublist = []
+
+
+    if sublist:
+        result.append(sublist)
+
+    return result
+
+
 
 def write_dict_to_json_file(data_dict, filename):
     with open(filename, 'w') as json_file:
@@ -146,6 +168,17 @@ if __name__ == "__main__":
                     last_name = obs["event"]
                     last_lifecycle = obs["lifecycle"]
 
+        logs = [log for log in logs if log["lifecycle"] != "complete"]
         for log in logs:
             log["time"] = extract_hour_from_date(log["time"])
-        write_dict_to_json_file(logs, os.path.basename(filename) + str(i) + ".csv")
+            del log["lifecycle"]
+        logs = split_list_by_event(logs, "sleeping")
+        logs_train = logs[:-1]
+        logs_test = logs[-10]
+        write_dict_to_json_file(logs_train, os.path.basename(filename) + str(i) + "_train" + ".json")
+        write_dict_to_json_file(logs_test, os.path.basename(filename) + str(i) + "_test" + ".json")
+
+
+
+
+

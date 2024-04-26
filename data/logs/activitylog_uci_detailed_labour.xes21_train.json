@@ -1,0 +1,2392 @@
+[
+    [
+        {
+            "event": "washing",
+            "time": "00:48"
+        },
+        {
+            "event": "watchingtv",
+            "time": "00:50"
+        },
+        {
+            "event": "toilet",
+            "time": "01:53"
+        },
+        {
+            "event": "washing",
+            "time": "01:53"
+        },
+        {
+            "event": "toilet",
+            "time": "01:53"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:55"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:37"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "09:42"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:46"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:52"
+        },
+        {
+            "event": "watchingtv",
+            "time": "09:56"
+        },
+        {
+            "event": "washing",
+            "time": "10:18"
+        },
+        {
+            "event": "shower",
+            "time": "10:21"
+        },
+        {
+            "event": "grooming",
+            "time": "10:33"
+        },
+        {
+            "event": "washing",
+            "time": "10:33"
+        },
+        {
+            "event": "grooming",
+            "time": "10:40"
+        },
+        {
+            "event": "washing",
+            "time": "10:42"
+        },
+        {
+            "event": "watchingtv",
+            "time": "10:47"
+        },
+        {
+            "event": "snack",
+            "time": "11:05"
+        },
+        {
+            "event": "toilet",
+            "time": "12:41"
+        },
+        {
+            "event": "washing",
+            "time": "13:00"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:19"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "13:45"
+        },
+        {
+            "event": "watchingtv",
+            "time": "14:54"
+        },
+        {
+            "event": "snack",
+            "time": "15:23"
+        },
+        {
+            "event": "toilet",
+            "time": "15:38"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:42"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "17:10"
+        },
+        {
+            "event": "toilet",
+            "time": "17:43"
+        },
+        {
+            "event": "grooming",
+            "time": "17:44"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "17:45"
+        },
+        {
+            "event": "snack",
+            "time": "18:47"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:02"
+        },
+        {
+            "event": "washing",
+            "time": "21:14"
+        },
+        {
+            "event": "grooming",
+            "time": "21:15"
+        },
+        {
+            "event": "prepareDinner",
+            "time": "22:35"
+        },
+        {
+            "event": "washing",
+            "time": "22:53"
+        },
+        {
+            "event": "watchingtv",
+            "time": "22:54"
+        },
+        {
+            "event": "toilet",
+            "time": "23:36"
+        },
+        {
+            "event": "watchingtv",
+            "time": "23:46"
+        },
+        {
+            "event": "washing",
+            "time": "01:29"
+        },
+        {
+            "event": "grooming",
+            "time": "01:29"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:30"
+        }
+    ],
+    [
+        {
+            "event": "prepareBreakfast",
+            "time": "08:56"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "08:58"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:04"
+        },
+        {
+            "event": "washing",
+            "time": "09:11"
+        },
+        {
+            "event": "toilet",
+            "time": "09:14"
+        },
+        {
+            "event": "washing",
+            "time": "09:21"
+        },
+        {
+            "event": "grooming",
+            "time": "09:37"
+        },
+        {
+            "event": "snack",
+            "time": "10:14"
+        },
+        {
+            "event": "snack",
+            "time": "13:47"
+        },
+        {
+            "event": "toilet",
+            "time": "14:05"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:08"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:19"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "14:43"
+        },
+        {
+            "event": "toilet",
+            "time": "16:07"
+        },
+        {
+            "event": "watchingtv",
+            "time": "16:33"
+        },
+        {
+            "event": "snack",
+            "time": "17:34"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "17:37"
+        },
+        {
+            "event": "snack",
+            "time": "18:51"
+        },
+        {
+            "event": "toilet",
+            "time": "19:46"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:53"
+        },
+        {
+            "event": "orderFood",
+            "time": "23:05"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "23:17"
+        },
+        {
+            "event": "washing",
+            "time": "23:39"
+        },
+        {
+            "event": "grooming",
+            "time": "23:40"
+        },
+        {
+            "event": "watchingtv",
+            "time": "23:45"
+        },
+        {
+            "event": "washing",
+            "time": "00:27"
+        },
+        {
+            "event": "toilet",
+            "time": "00:28"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:29"
+        }
+    ],
+    [
+        {
+            "event": "washing",
+            "time": "05:15"
+        },
+        {
+            "event": "grooming",
+            "time": "05:15"
+        },
+        {
+            "event": "sleeping",
+            "time": "05:16"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:04"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "09:06"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:09"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:17"
+        },
+        {
+            "event": "watchingtv",
+            "time": "09:22"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:38"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:42"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "11:07"
+        },
+        {
+            "event": "washing",
+            "time": "11:47"
+        },
+        {
+            "event": "shower",
+            "time": "11:56"
+        },
+        {
+            "event": "washing",
+            "time": "12:00"
+        },
+        {
+            "event": "grooming",
+            "time": "12:10"
+        },
+        {
+            "event": "washing",
+            "time": "12:21"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:29"
+        },
+        {
+            "event": "toilet",
+            "time": "14:23"
+        },
+        {
+            "event": "grooming",
+            "time": "14:24"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:58"
+        },
+        {
+            "event": "prepareDinner",
+            "time": "21:30"
+        },
+        {
+            "event": "heatOven",
+            "time": "21:32"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "21:37"
+        },
+        {
+            "event": "watchingtv",
+            "time": "21:48"
+        },
+        {
+            "event": "snack",
+            "time": "22:14"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "22:18"
+        },
+        {
+            "event": "washing",
+            "time": "00:07"
+        },
+        {
+            "event": "toilet",
+            "time": "00:09"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:10"
+        }
+    ],
+    [
+        {
+            "event": "listeningMusic",
+            "time": "00:43"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:55"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "07:52"
+        },
+        {
+            "event": "sleeping",
+            "time": "07:53"
+        }
+    ],
+    [
+        {
+            "event": "prepareBreakfast",
+            "time": "09:37"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:41"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:47"
+        },
+        {
+            "event": "toilet",
+            "time": "09:51"
+        },
+        {
+            "event": "grooming",
+            "time": "09:53"
+        },
+        {
+            "event": "washing",
+            "time": "09:53"
+        },
+        {
+            "event": "shower",
+            "time": "09:58"
+        },
+        {
+            "event": "washing",
+            "time": "10:05"
+        },
+        {
+            "event": "grooming",
+            "time": "10:08"
+        },
+        {
+            "event": "snack",
+            "time": "10:11"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:26"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:09"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:35"
+        },
+        {
+            "event": "toilet",
+            "time": "15:48"
+        },
+        {
+            "event": "grooming",
+            "time": "15:50"
+        },
+        {
+            "event": "prepareDinner",
+            "time": "22:07"
+        },
+        {
+            "event": "heatOven",
+            "time": "22:08"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "22:26"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "00:48"
+        },
+        {
+            "event": "grooming",
+            "time": "00:51"
+        },
+        {
+            "event": "washing",
+            "time": "00:51"
+        },
+        {
+            "event": "toilet",
+            "time": "00:54"
+        },
+        {
+            "event": "grooming",
+            "time": "00:55"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:58"
+        }
+    ],
+    [
+        {
+            "event": "prepareBreakfast",
+            "time": "10:39"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:40"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:52"
+        },
+        {
+            "event": "shower",
+            "time": "11:03"
+        },
+        {
+            "event": "washing",
+            "time": "11:09"
+        },
+        {
+            "event": "grooming",
+            "time": "11:22"
+        },
+        {
+            "event": "washing",
+            "time": "11:40"
+        },
+        {
+            "event": "grooming",
+            "time": "11:48"
+        },
+        {
+            "event": "snack",
+            "time": "12:09"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:56"
+        },
+        {
+            "event": "orderFood",
+            "time": "14:13"
+        },
+        {
+            "event": "toilet",
+            "time": "15:05"
+        },
+        {
+            "event": "toilet",
+            "time": "18:09"
+        },
+        {
+            "event": "snack",
+            "time": "18:11"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:16"
+        },
+        {
+            "event": "washing",
+            "time": "22:10"
+        },
+        {
+            "event": "grooming",
+            "time": "22:11"
+        },
+        {
+            "event": "toilet",
+            "time": "00:12"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:14"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:11"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:13"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:25"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:34"
+        },
+        {
+            "event": "washing",
+            "time": "11:51"
+        },
+        {
+            "event": "shower",
+            "time": "12:04"
+        },
+        {
+            "event": "toilet",
+            "time": "12:14"
+        },
+        {
+            "event": "washing",
+            "time": "12:17"
+        },
+        {
+            "event": "grooming",
+            "time": "12:24"
+        },
+        {
+            "event": "washing",
+            "time": "12:29"
+        },
+        {
+            "event": "grooming",
+            "time": "12:36"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:41"
+        },
+        {
+            "event": "grooming",
+            "time": "14:27"
+        },
+        {
+            "event": "washing",
+            "time": "14:27"
+        },
+        {
+            "event": "grooming",
+            "time": "14:27"
+        },
+        {
+            "event": "washing",
+            "time": "14:29"
+        },
+        {
+            "event": "toilet",
+            "time": "15:54"
+        },
+        {
+            "event": "snack",
+            "time": "15:55"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "16:08"
+        },
+        {
+            "event": "orderFood",
+            "time": "21:47"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "21:59"
+        },
+        {
+            "event": "washing",
+            "time": "22:25"
+        },
+        {
+            "event": "grooming",
+            "time": "22:30"
+        },
+        {
+            "event": "snack",
+            "time": "22:31"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "22:32"
+        },
+        {
+            "event": "toilet",
+            "time": "01:23"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:25"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:19"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:21"
+        },
+        {
+            "event": "washing",
+            "time": "10:40"
+        },
+        {
+            "event": "snack",
+            "time": "11:00"
+        },
+        {
+            "event": "watchingtv",
+            "time": "11:15"
+        },
+        {
+            "event": "toilet",
+            "time": "13:01"
+        },
+        {
+            "event": "snack",
+            "time": "13:03"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:33"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:25"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:41"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "15:12"
+        },
+        {
+            "event": "toilet",
+            "time": "15:54"
+        },
+        {
+            "event": "watchingtv",
+            "time": "20:34"
+        },
+        {
+            "event": "grooming",
+            "time": "00:03"
+        },
+        {
+            "event": "washing",
+            "time": "00:03"
+        },
+        {
+            "event": "grooming",
+            "time": "00:05"
+        },
+        {
+            "event": "toilet",
+            "time": "00:08"
+        },
+        {
+            "event": "grooming",
+            "time": "00:09"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:12"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:59"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:01"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:03"
+        },
+        {
+            "event": "watchingtv",
+            "time": "10:07"
+        },
+        {
+            "event": "washing",
+            "time": "11:37"
+        },
+        {
+            "event": "toilet",
+            "time": "11:48"
+        },
+        {
+            "event": "washing",
+            "time": "11:49"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:45"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "15:02"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "15:15"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "15:32"
+        },
+        {
+            "event": "snack",
+            "time": "17:50"
+        },
+        {
+            "event": "watchingtv",
+            "time": "17:56"
+        },
+        {
+            "event": "toilet",
+            "time": "21:08"
+        },
+        {
+            "event": "snack",
+            "time": "01:40"
+        },
+        {
+            "event": "grooming",
+            "time": "01:47"
+        },
+        {
+            "event": "washing",
+            "time": "01:47"
+        },
+        {
+            "event": "grooming",
+            "time": "01:52"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:55"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:16"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:19"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:23"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:26"
+        },
+        {
+            "event": "snack",
+            "time": "11:02"
+        },
+        {
+            "event": "watchingtv",
+            "time": "11:11"
+        },
+        {
+            "event": "snack",
+            "time": "11:56"
+        },
+        {
+            "event": "washing",
+            "time": "12:20"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:38"
+        },
+        {
+            "event": "toilet",
+            "time": "15:04"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "15:05"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "15:12"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:27"
+        },
+        {
+            "event": "snack",
+            "time": "16:43"
+        },
+        {
+            "event": "watchingtv",
+            "time": "16:53"
+        },
+        {
+            "event": "snack",
+            "time": "18:15"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:19"
+        },
+        {
+            "event": "washing",
+            "time": "21:01"
+        },
+        {
+            "event": "toilet",
+            "time": "21:05"
+        },
+        {
+            "event": "snack",
+            "time": "00:36"
+        },
+        {
+            "event": "toilet",
+            "time": "00:44"
+        },
+        {
+            "event": "washing",
+            "time": "00:45"
+        },
+        {
+            "event": "grooming",
+            "time": "00:46"
+        },
+        {
+            "event": "watchingtv",
+            "time": "00:48"
+        },
+        {
+            "event": "washing",
+            "time": "01:33"
+        },
+        {
+            "event": "grooming",
+            "time": "01:33"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:35"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:44"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "09:49"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:53"
+        },
+        {
+            "event": "washing",
+            "time": "10:32"
+        },
+        {
+            "event": "grooming",
+            "time": "10:48"
+        },
+        {
+            "event": "washing",
+            "time": "10:48"
+        },
+        {
+            "event": "grooming",
+            "time": "10:52"
+        },
+        {
+            "event": "sleeping",
+            "time": "10:56"
+        }
+    ],
+    [
+        {
+            "event": "snack",
+            "time": "12:53"
+        },
+        {
+            "event": "grooming",
+            "time": "13:03"
+        },
+        {
+            "event": "washing",
+            "time": "13:03"
+        },
+        {
+            "event": "grooming",
+            "time": "13:04"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "13:05"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:01"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:23"
+        },
+        {
+            "event": "toilet",
+            "time": "14:40"
+        },
+        {
+            "event": "watchingtv",
+            "time": "14:52"
+        },
+        {
+            "event": "toilet",
+            "time": "16:55"
+        },
+        {
+            "event": "snack",
+            "time": "16:57"
+        },
+        {
+            "event": "watchingtv",
+            "time": "17:11"
+        },
+        {
+            "event": "snack",
+            "time": "17:58"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "18:07"
+        },
+        {
+            "event": "toilet",
+            "time": "22:07"
+        },
+        {
+            "event": "watchingtv",
+            "time": "22:17"
+        },
+        {
+            "event": "toilet",
+            "time": "01:31"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:33"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "08:55"
+        },
+        {
+            "event": "sleeping",
+            "time": "08:56"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:50"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "09:57"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:58"
+        },
+        {
+            "event": "shower",
+            "time": "10:42"
+        },
+        {
+            "event": "washing",
+            "time": "10:52"
+        },
+        {
+            "event": "grooming",
+            "time": "11:06"
+        },
+        {
+            "event": "washing",
+            "time": "11:11"
+        },
+        {
+            "event": "toilet",
+            "time": "11:15"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:04"
+        },
+        {
+            "event": "toilet",
+            "time": "19:00"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:09"
+        },
+        {
+            "event": "washing",
+            "time": "01:37"
+        },
+        {
+            "event": "toilet",
+            "time": "01:41"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:43"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:18"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:20"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:23"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:30"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:46"
+        },
+        {
+            "event": "washing",
+            "time": "11:53"
+        },
+        {
+            "event": "grooming",
+            "time": "11:53"
+        },
+        {
+            "event": "snack",
+            "time": "11:54"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "11:58"
+        },
+        {
+            "event": "toilet",
+            "time": "12:25"
+        },
+        {
+            "event": "washing",
+            "time": "13:32"
+        },
+        {
+            "event": "shower",
+            "time": "13:41"
+        },
+        {
+            "event": "washing",
+            "time": "13:54"
+        },
+        {
+            "event": "grooming",
+            "time": "13:57"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "14:10"
+        },
+        {
+            "event": "watchingtv",
+            "time": "16:22"
+        },
+        {
+            "event": "snack",
+            "time": "19:46"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:47"
+        },
+        {
+            "event": "grooming",
+            "time": "21:01"
+        },
+        {
+            "event": "washing",
+            "time": "21:01"
+        },
+        {
+            "event": "toilet",
+            "time": "21:04"
+        },
+        {
+            "event": "washing",
+            "time": "21:06"
+        },
+        {
+            "event": "grooming",
+            "time": "21:09"
+        },
+        {
+            "event": "grooming",
+            "time": "01:41"
+        },
+        {
+            "event": "washing",
+            "time": "01:41"
+        },
+        {
+            "event": "grooming",
+            "time": "01:43"
+        },
+        {
+            "event": "toilet",
+            "time": "01:49"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:51"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "09:23"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "09:27"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:31"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:34"
+        },
+        {
+            "event": "grooming",
+            "time": "09:46"
+        },
+        {
+            "event": "washing",
+            "time": "09:46"
+        },
+        {
+            "event": "grooming",
+            "time": "09:49"
+        },
+        {
+            "event": "washing",
+            "time": "09:50"
+        },
+        {
+            "event": "toilet",
+            "time": "10:00"
+        },
+        {
+            "event": "washing",
+            "time": "10:04"
+        },
+        {
+            "event": "grooming",
+            "time": "10:13"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:33"
+        },
+        {
+            "event": "snack",
+            "time": "12:28"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:58"
+        },
+        {
+            "event": "snack",
+            "time": "13:16"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:54"
+        },
+        {
+            "event": "toilet",
+            "time": "14:24"
+        },
+        {
+            "event": "toilet",
+            "time": "14:24"
+        },
+        {
+            "event": "grooming",
+            "time": "14:25"
+        },
+        {
+            "event": "washing",
+            "time": "14:25"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "16:05"
+        },
+        {
+            "event": "toilet",
+            "time": "17:40"
+        },
+        {
+            "event": "watchingtv",
+            "time": "17:55"
+        },
+        {
+            "event": "snack",
+            "time": "19:30"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "22:15"
+        },
+        {
+            "event": "watchingtv",
+            "time": "22:19"
+        },
+        {
+            "event": "toilet",
+            "time": "23:54"
+        },
+        {
+            "event": "washing",
+            "time": "23:55"
+        },
+        {
+            "event": "grooming",
+            "time": "23:56"
+        },
+        {
+            "event": "washing",
+            "time": "23:58"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:00"
+        }
+    ],
+    [
+        {
+            "event": "grooming",
+            "time": "00:58"
+        },
+        {
+            "event": "washing",
+            "time": "00:58"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:59"
+        }
+    ],
+    [
+        {
+            "event": "prepareBreakfast",
+            "time": "09:38"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "09:41"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "09:42"
+        },
+        {
+            "event": "toilet",
+            "time": "09:50"
+        },
+        {
+            "event": "washing",
+            "time": "10:04"
+        },
+        {
+            "event": "grooming",
+            "time": "10:04"
+        },
+        {
+            "event": "washing",
+            "time": "10:05"
+        },
+        {
+            "event": "grooming",
+            "time": "10:07"
+        },
+        {
+            "event": "washing",
+            "time": "10:15"
+        },
+        {
+            "event": "grooming",
+            "time": "10:23"
+        },
+        {
+            "event": "washing",
+            "time": "10:30"
+        },
+        {
+            "event": "toilet",
+            "time": "10:34"
+        },
+        {
+            "event": "watchingtv",
+            "time": "14:27"
+        },
+        {
+            "event": "washing",
+            "time": "16:12"
+        },
+        {
+            "event": "toilet",
+            "time": "16:13"
+        },
+        {
+            "event": "watchingtv",
+            "time": "16:18"
+        },
+        {
+            "event": "snack",
+            "time": "18:16"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:44"
+        },
+        {
+            "event": "toilet",
+            "time": "21:00"
+        },
+        {
+            "event": "grooming",
+            "time": "21:01"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "21:02"
+        },
+        {
+            "event": "orderFood",
+            "time": "22:26"
+        },
+        {
+            "event": "heatOven",
+            "time": "22:27"
+        },
+        {
+            "event": "watchingtv",
+            "time": "00:18"
+        },
+        {
+            "event": "toilet",
+            "time": "01:40"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:40"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:25"
+        },
+        {
+            "event": "grooming",
+            "time": "10:27"
+        },
+        {
+            "event": "washing",
+            "time": "10:27"
+        },
+        {
+            "event": "grooming",
+            "time": "10:29"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:43"
+        },
+        {
+            "event": "washing",
+            "time": "11:52"
+        },
+        {
+            "event": "shower",
+            "time": "11:57"
+        },
+        {
+            "event": "washing",
+            "time": "12:02"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:04"
+        },
+        {
+            "event": "grooming",
+            "time": "12:26"
+        },
+        {
+            "event": "washing",
+            "time": "12:26"
+        },
+        {
+            "event": "grooming",
+            "time": "12:42"
+        },
+        {
+            "event": "toilet",
+            "time": "12:54"
+        },
+        {
+            "event": "grooming",
+            "time": "12:55"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:56"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:51"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "15:08"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "15:20"
+        },
+        {
+            "event": "snack",
+            "time": "17:30"
+        },
+        {
+            "event": "toilet",
+            "time": "17:46"
+        },
+        {
+            "event": "watchingtv",
+            "time": "17:51"
+        },
+        {
+            "event": "orderFood",
+            "time": "22:12"
+        },
+        {
+            "event": "eatingDinner",
+            "time": "22:16"
+        },
+        {
+            "event": "watchingtv",
+            "time": "22:40"
+        },
+        {
+            "event": "sleeping",
+            "time": "02:27"
+        }
+    ],
+    [
+        {
+            "event": "washing",
+            "time": "10:21"
+        },
+        {
+            "event": "shower",
+            "time": "10:25"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:38"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:40"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:43"
+        },
+        {
+            "event": "washing",
+            "time": "10:49"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:51"
+        },
+        {
+            "event": "washing",
+            "time": "13:06"
+        },
+        {
+            "event": "toilet",
+            "time": "13:06"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "13:38"
+        },
+        {
+            "event": "toilet",
+            "time": "14:26"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:31"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:42"
+        },
+        {
+            "event": "washing",
+            "time": "15:04"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:07"
+        },
+        {
+            "event": "snack",
+            "time": "20:20"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "20:21"
+        },
+        {
+            "event": "sleeping",
+            "time": "02:16"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "11:37"
+        },
+        {
+            "event": "washing",
+            "time": "11:37"
+        },
+        {
+            "event": "shower",
+            "time": "11:49"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "12:09"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "12:11"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "12:11"
+        },
+        {
+            "event": "washing",
+            "time": "12:19"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:22"
+        },
+        {
+            "event": "snack",
+            "time": "13:25"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:25"
+        },
+        {
+            "event": "toilet",
+            "time": "15:13"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "15:15"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "15:23"
+        },
+        {
+            "event": "washing",
+            "time": "15:49"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:52"
+        },
+        {
+            "event": "toilet",
+            "time": "16:31"
+        },
+        {
+            "event": "snack",
+            "time": "16:32"
+        },
+        {
+            "event": "watchingtv",
+            "time": "16:34"
+        },
+        {
+            "event": "washing",
+            "time": "17:08"
+        },
+        {
+            "event": "toilet",
+            "time": "17:09"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "20:28"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:22"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:14"
+        },
+        {
+            "event": "shower",
+            "time": "10:14"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "10:23"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "10:27"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "10:28"
+        },
+        {
+            "event": "washing",
+            "time": "10:39"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "10:41"
+        },
+        {
+            "event": "snack",
+            "time": "13:05"
+        },
+        {
+            "event": "watchingtv",
+            "time": "13:05"
+        },
+        {
+            "event": "toilet",
+            "time": "14:11"
+        },
+        {
+            "event": "watchingtv",
+            "time": "14:13"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:39"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:56"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:11"
+        },
+        {
+            "event": "toilet",
+            "time": "16:40"
+        },
+        {
+            "event": "snack",
+            "time": "16:41"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "16:41"
+        },
+        {
+            "event": "washing",
+            "time": "18:01"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:01"
+        },
+        {
+            "event": "toilet",
+            "time": "18:57"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:57"
+        },
+        {
+            "event": "toilet",
+            "time": "19:37"
+        },
+        {
+            "event": "washing",
+            "time": "20:13"
+        },
+        {
+            "event": "watchingtv",
+            "time": "20:14"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:37"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:37"
+        }
+    ],
+    [
+        {
+            "event": "washing",
+            "time": "10:55"
+        },
+        {
+            "event": "shower",
+            "time": "10:58"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:17"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "11:19"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:20"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "11:30"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:29"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "15:09"
+        },
+        {
+            "event": "toilet",
+            "time": "16:26"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:55"
+        },
+        {
+            "event": "toilet",
+            "time": "19:28"
+        },
+        {
+            "event": "washing",
+            "time": "23:53"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "23:54"
+        },
+        {
+            "event": "washing",
+            "time": "01:18"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "01:19"
+        },
+        {
+            "event": "washing",
+            "time": "02:09"
+        },
+        {
+            "event": "sleeping",
+            "time": "02:15"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "12:20"
+        },
+        {
+            "event": "shower",
+            "time": "12:21"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "12:29"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "12:31"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "12:32"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "12:37"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:47"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:51"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "15:24"
+        },
+        {
+            "event": "washing",
+            "time": "15:56"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:57"
+        },
+        {
+            "event": "toilet",
+            "time": "16:47"
+        },
+        {
+            "event": "snack",
+            "time": "19:40"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:41"
+        },
+        {
+            "event": "toilet",
+            "time": "21:44"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "21:46"
+        },
+        {
+            "event": "washing",
+            "time": "01:31"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:35"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "11:53"
+        },
+        {
+            "event": "washing",
+            "time": "11:57"
+        },
+        {
+            "event": "shower",
+            "time": "12:01"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:10"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "12:15"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "12:19"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "12:18"
+        },
+        {
+            "event": "watchingtv",
+            "time": "12:26"
+        },
+        {
+            "event": "washing",
+            "time": "14:28"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "15:00"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "15:14"
+        },
+        {
+            "event": "washing",
+            "time": "15:42"
+        },
+        {
+            "event": "toilet",
+            "time": "15:44"
+        },
+        {
+            "event": "toilet",
+            "time": "16:36"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "16:37"
+        },
+        {
+            "event": "watchingtv",
+            "time": "19:01"
+        },
+        {
+            "event": "snack",
+            "time": "19:24"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "19:24"
+        },
+        {
+            "event": "washing",
+            "time": "20:07"
+        },
+        {
+            "event": "toilet",
+            "time": "20:08"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "20:20"
+        },
+        {
+            "event": "washing",
+            "time": "21:06"
+        },
+        {
+            "event": "toilet",
+            "time": "21:06"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "21:07"
+        },
+        {
+            "event": "toilet",
+            "time": "00:39"
+        },
+        {
+            "event": "washing",
+            "time": "00:40"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:42"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "11:08"
+        },
+        {
+            "event": "washing",
+            "time": "11:09"
+        },
+        {
+            "event": "shower",
+            "time": "11:12"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:30"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "11:31"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:33"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "11:39"
+        },
+        {
+            "event": "prepareLunch",
+            "time": "14:41"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:56"
+        },
+        {
+            "event": "washing",
+            "time": "15:18"
+        },
+        {
+            "event": "watchingtv",
+            "time": "15:21"
+        },
+        {
+            "event": "toilet",
+            "time": "17:18"
+        },
+        {
+            "event": "washing",
+            "time": "17:19"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "17:19"
+        },
+        {
+            "event": "washing",
+            "time": "18:07"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "18:07"
+        },
+        {
+            "event": "snack",
+            "time": "19:22"
+        },
+        {
+            "event": "washing",
+            "time": "19:25"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "19:40"
+        },
+        {
+            "event": "washing",
+            "time": "00:07"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "00:08"
+        },
+        {
+            "event": "toilet",
+            "time": "00:57"
+        },
+        {
+            "event": "sleeping",
+            "time": "00:59"
+        }
+    ],
+    [
+        {
+            "event": "toilet",
+            "time": "10:49"
+        },
+        {
+            "event": "washing",
+            "time": "10:50"
+        },
+        {
+            "event": "shower",
+            "time": "11:05"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:12"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "11:13"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:17"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "11:22"
+        },
+        {
+            "event": "orderFood",
+            "time": "14:04"
+        },
+        {
+            "event": "eatingLunch",
+            "time": "14:14"
+        },
+        {
+            "event": "watchingtv",
+            "time": "14:41"
+        },
+        {
+            "event": "washing",
+            "time": "15:31"
+        },
+        {
+            "event": "toilet",
+            "time": "15:31"
+        },
+        {
+            "event": "washing",
+            "time": "16:15"
+        },
+        {
+            "event": "washing",
+            "time": "18:14"
+        },
+        {
+            "event": "toilet",
+            "time": "18:15"
+        },
+        {
+            "event": "watchingtv",
+            "time": "18:15"
+        },
+        {
+            "event": "snack",
+            "time": "19:23"
+        },
+        {
+            "event": "toilet",
+            "time": "20:39"
+        },
+        {
+            "event": "watchingtv",
+            "time": "20:40"
+        },
+        {
+            "event": "washing",
+            "time": "23:19"
+        },
+        {
+            "event": "watchingtv",
+            "time": "23:20"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:39"
+        }
+    ],
+    [
+        {
+            "event": "washing",
+            "time": "11:17"
+        },
+        {
+            "event": "toilet",
+            "time": "11:17"
+        },
+        {
+            "event": "shower",
+            "time": "11:19"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:25"
+        },
+        {
+            "event": "prepareCoffee",
+            "time": "11:29"
+        },
+        {
+            "event": "eatingBreakfast",
+            "time": "11:29"
+        },
+        {
+            "event": "watchingtv",
+            "time": "11:36"
+        },
+        {
+            "event": "washing",
+            "time": "14:04"
+        },
+        {
+            "event": "listeningMusic",
+            "time": "16:24"
+        },
+        {
+            "event": "washing",
+            "time": "22:13"
+        },
+        {
+            "event": "watchingtv",
+            "time": "22:14"
+        },
+        {
+            "event": "washing",
+            "time": "23:14"
+        },
+        {
+            "event": "watchingtv",
+            "time": "23:14"
+        },
+        {
+            "event": "washing",
+            "time": "01:04"
+        },
+        {
+            "event": "sleeping",
+            "time": "01:16"
+        }
+    ]
+]

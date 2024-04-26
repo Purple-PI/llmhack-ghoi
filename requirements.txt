@@ -1,0 +1,16 @@
+requests
+tqdm
+numpy
+certifi
+chardet
+idna
+matplotlib
+networkx
+opencv-python
+pillow
+plotly
+requests
+ipdb
+termcolor
+tqdm
+urllib3
