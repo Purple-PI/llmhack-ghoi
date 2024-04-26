@@ -7,7 +7,6 @@ class RoutinesManager:
     def __init__(self, filepath) -> None:
         self.filepath = filepath
         self.routines = []
-        self.data = []
         self.load_routines()
 
     def tick_routine(self, timestamp):
@@ -20,7 +19,7 @@ class RoutinesManager:
             if routine_time_obj.strftime("%H:%M") > timestamp_ftime:
                 remaining_routines.append(routine)
             else:
-                routine_todo = remaining_routines
+                routine_todo = routine
         self.routines = remaining_routines
         return routine_todo
 

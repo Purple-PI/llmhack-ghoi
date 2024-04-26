@@ -1,0 +1,52 @@
+[
+    {
+        "action": "prepare_coffee",
+        "time": "11:00",
+        "logs_autotask": [
+            {
+                "event": "sleeping",
+                "time": "10:49",
+                "lifecycle": "complete"
+            },
+            {
+                "event": "toilet",
+                "time": "10:51",
+                "lifecycle": "start"
+            },
+            {
+                "event": "toilet",
+                "time": "10:52",
+                "lifecycle": "complete"
+            },
+            {
+                "event": "washing",
+                "time": "10:52",
+                "lifecycle": "start"
+            },
+            {
+                "event": "washing",
+                "time": "10:52",
+                "lifecycle": "complete"
+            },
+            {
+                "event": "shower",
+                "time": "10:54",
+                "lifecycle": "start"
+            },
+            {
+                "event": "shower",
+                "time": "10:58",
+                "lifecycle": "complete"
+            },
+            {
+                "event": "prepareBreakfast",
+                "time": "11:00",
+                "lifecycle": "start"
+            },
+            {
+                "time": "11:00",
+                "event": "prepare_coffee"
+            }
+        ]
+    }
+]

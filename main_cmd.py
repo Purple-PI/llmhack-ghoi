@@ -1,7 +1,4 @@
 import os
-import json
-import datetime
-
 from mistralai.client import MistralClient
 
 from agent.logs import LogsManager
@@ -17,5 +14,10 @@ if __name__ == "__main__":
         print(f"{str(11+k)}:00")
         client = MistralClient(api_key=api_key)
         agent = Agent(model_name=model, client=client, logs=logs)
-        action = agent.tick(f"{str(11+k)}:00")
-        print(f'Current action: {action}')
+        output = agent.tick(f"{str(11+k)}:00")
+        print(output)
+        input_user = input('Answer: ')
+        output = agent.input_user_0(input_user)
+        print(output)
+        input_user = input('Answer: ')
+        agent.input_user_1(input_user)

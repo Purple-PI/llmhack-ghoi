@@ -1,9 +1,7 @@
 import datetime
-import json
 
 from prompts.fun_prompt import classification, feedback_register, feedback_register_classification, feedback_todo, feedback_todo_classification, query, auto_evaluation
 from agent.routines import RoutinesManager
-from agent.logs import LogsManager
 
 class Agent:
     def __init__(self, model_name, client, logs):
@@ -14,10 +12,12 @@ class Agent:
         self.timestamp = datetime.datetime.strptime("00:00", "%H:%M")
         #load routines once a day
         self.routines = RoutinesManager(self.file_path)
+        self.states = {"state0": {}, "state1": {}, "state2": {}, "state3": {}}
     
     def tick(self, timestamp):
         self.timestamp = datetime.datetime.strptime(timestamp, "%H:%M")
-        return self._prediction_tick()
+        self.states = {"state0": {}, "state1": {}, "state2": {}, "state3": {}}
+        return self._tick_trigger()
 
     def classification_fn(self, logs, time):
         "STEP 1: LLM prediction of next useful action"
@@ -75,36 +75,46 @@ class Agent:
         response = self.api(**params)
         tool_call = response.choices[0].message.tool_calls[0]
         return tool_call.function_name
-        
-    def _prediction_tick(self):
+    
+    def _tick_trigger(self):
         # get logs from previous days
         logs, formatted_logs = self.logs.get_logs()
         str_timestamp = self.timestamp.strftime("%H:%M")
         action = self.routines.tick_routine(self.timestamp)
         if action != None:
             action_to_execute = self.auto_evaluation(logs[-1], formatted_logs, action, str_timestamp)
-            # check if action is do nothing keep action in the stack
-            return action_to_execute
-        
         action_to_execute = self.classification_fn(formatted_logs, str_timestamp)
-        print("A")
-        print(action_to_execute)
-        print()
-        if action_to_execute == "do_nothing":
+        if action_to_execute != "do_nothing":
+            self.states["state0"] = action_to_execute
+        _, formatted_logs = self.logs.get_logs()
+        action_to_execute = self.states["state0"]
+        if action_to_execute:
+            output_user = self.feedback_todo_fn(formatted_logs, action_to_execute)
+            self.states["state1"] = {"action": action_to_execute, "output_user": output_user}
+            return output_user
+        else:
             return ""
-        output_user = self.feedback_todo_fn(formatted_logs, action_to_execute)
-        print(output_user)
-        input_user = input('Answer: ')
-        execute_action = self.feedback_todo_classification_fn(action_to_execute, input_user)
-        output_user = self.feedback_register_fn(formatted_logs, action_to_execute, output_user, input_user) 
-        print(output_user)
-        input_user = input('Answer: ')
-        register_action = self.feedback_register_classification_fn(action_to_execute, input_user)
-        if register_action == 'yes':
-            #TO UPDATE: replace parameters with the one from tools
-            self.routines.add_routine(action_to_execute, str_timestamp, self.logs.data[-1])
-        if execute_action == 'yes':
-            self.logs.add_event(str_timestamp, action_to_execute)
+    
+    def input_user_0(self, input_user):
+        _, formatted_logs = self.logs.get_logs()
+        if self.states["state1"]:
+            action_to_execute, output_user = self.states["state1"]['action'], self.states["state1"]['output_user']
+            str_timestamp = self.timestamp.strftime("%H:%M")
+            execute_action = self.feedback_todo_classification_fn(action_to_execute, input_user)
+            if execute_action == "yes":
+                self.logs.add_event(str_timestamp, action_to_execute)
+            output_user = self.feedback_register_fn(formatted_logs, action_to_execute, output_user, input_user)
+            return output_user
+        return ""
+
+    def input_user_1(self, input_user):
+        str_timestamp = self.timestamp.strftime("%H:%M")
+        if self.states["state1"]:
+            action = self.states["state1"]['action']
+            register_action = self.feedback_register_classification_fn(action, input_user)
+            if register_action == 'yes':
+                #TO UPDATE: replace parameters with the one from tools
+                self.routines.add_routine(action, str_timestamp, self.logs.data[-1])
 
     def user_direct_request(self, user_input):
         resp = self.query(user_input, self.timestamp)
