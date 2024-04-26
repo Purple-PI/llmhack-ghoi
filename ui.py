@@ -1,6 +1,7 @@
 import gradio as gr
 import time
 import json
+from datetime import datetime
 
 import logging
 
@@ -26,12 +27,21 @@ def vlm_output_fn(image):
     return "An image description..."
 
 
-def proactive_interaction_agent_fn(image_description, chat_history):
+def format_objects(objects):
+    formatted_strings = []
+    for obj in objects:
+        formatted_obj = ", ".join([f"{key}: {value}" for key, value in obj.items()])
+        formatted_strings.append(formatted_obj)
+    return "\n".join(formatted_strings)
+
+
+def proactive_interaction_agent_fn(image_description, time, chat_history):
+    global agent_logs
     logger.info(f"Run LLM on image description {image_description}...")
-    time.sleep(2)
-    llm_answer = "I see that you are doing task1, you usually do task2 after task1, If you need I can do the task2."
+    agent.add_event(image_description, time)
+    llm_answer = agent.tick_event(time)
     chat_history.append((None, llm_answer))
-    return chat_history
+    return chat_history, format_objects(agent_logs)
 
 
 def speech_to_text(audio):
@@ -41,13 +51,32 @@ def speech_to_text(audio):
 
 
 def human_answer_to_llm_fn(audio, chat_history):
+    global number_of_interaction, i, routines_to_display
     logger.info(f"Run speech-to-text on {audio}...")
     human_text = speech_to_text(audio)
 
-    time.sleep(2)
-    llm_answer = "No problem, I will do it"
+    if number_of_interaction == 0:
+        llm_answer = agent.input_user_0(human_text)
+    elif number_of_interaction == 1:
+        llm_answer = agent.input_user_1(human_text)
+
+        last_routine = agent.get_last_routine()
+        last_routine_time = last_routine["time"]
+        time = logs[i]["time"]
+
+        last_routine_datetime = datetime.strptime(last_routine_time, "%H:%M")
+        current_time_datetime = datetime.strptime(time, "%H:%M")
+
+        if last_routine_datetime >= current_time_datetime:
+            routines_to_display.append(last_routine)
+    else:
+        llm_answer = "I have Nothing to say anymore"
+    if llm_answer == "":
+        llm_answer = "**Nothing to do**"
+    number_of_interaction += 1
+
     chat_history.append((human_text, llm_answer))
-    return chat_history
+    return chat_history, format_objects(routines_to_display), format_objects(agent_logs)
 
 
 if __name__ == "__main__":
@@ -55,6 +84,9 @@ if __name__ == "__main__":
     with open(log_file, "r") as file:
         logs = json.load(file)
     i = 0
+    number_of_interaction = 0
+    routines_to_display = []
+    agent_logs = []
     event_to_video = {
         "sleeping": "sleep.mp4",
         "prepareBreakfast": "breakfast.mp4",
@@ -78,6 +110,8 @@ if __name__ == "__main__":
             i += 1
             if logs[i]["event"] in event_to_video or i >= len(logs):
                 break
+        i = i % len(logs)
+
         return "data/videos/" + event_to_video[logs[i]["event"]], logs[i]["time"], []
 
     with gr.Blocks() as app:
@@ -93,7 +127,11 @@ if __name__ == "__main__":
             placeholder="System is thinking... 🧠",
             interactive=False,
         )
-        chatbot = gr.Chatbot()
+
+        with gr.Row():
+            logs_text = gr.Textbox(label="Logs", scale=1, interactive=False)
+            routine_text = gr.Textbox(label="Routine", scale=1, interactive=False)
+            chatbot = gr.Chatbot(scale=3)
 
         with gr.Row():
             msg = gr.Audio(sources=["microphone"], scale=5)
@@ -105,8 +143,8 @@ if __name__ == "__main__":
         video.change(vlm_output_fn, inputs=video, outputs=vlm_output)
         app.load(vlm_output_fn, inputs=video, outputs=vlm_output)
 
-        vlm_output.change(proactive_interaction_agent_fn, inputs=[vlm_output, chatbot], outputs=chatbot)
-        send_button.click(human_answer_to_llm_fn, inputs=[msg, chatbot], outputs=chatbot)
+        vlm_output.change(proactive_interaction_agent_fn, inputs=[vlm_output, date, chatbot], outputs=[chatbot, logs_text])
+        send_button.click(human_answer_to_llm_fn, inputs=[msg, chatbot], outputs=[chatbot, routine_text, logs_text])
         next_button.click(next_event_fn, inputs=None, outputs=[video, date, chatbot])
     app.launch()
 
