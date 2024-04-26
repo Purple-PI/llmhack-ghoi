@@ -1,6 +1,6 @@
 A user lives in a home and has been observed through a smart home system.
 You previously asked the user if she/he wants you to remind the following action as a recurrent action that will be autonomously executes in the future: {action}.
 Here is her/his answer:
-{answer}
+{user_input}
 Does the user wants you to remind this action as a recurrent action?
 You must answer by calling the right tool.

@@ -7,10 +7,11 @@ class RoutinesManager:
     def __init__(self, filepath) -> None:
         self.filepath = filepath
         self.routines = []
-        self.reset_routines()
+        self.data = []
+        self.load_routines()
 
-    def tick_route(self, timestamp):
-        timestamp_ftime = datetime.datetime.strptime(timestamp, "%H:%M")
+    def tick_routine(self, timestamp):
+        timestamp_ftime = datetime.datetime.strftime(timestamp, "%H:%M")
         remaining_routines = []
         routine_todo = None
         for routine in self.routines:
@@ -23,26 +24,19 @@ class RoutinesManager:
         self.routines = remaining_routines
         return routine_todo
 
-    def add_routine(self, routine_name, routine_time):
-        with open(self.filepath, "r", encoding='utf-8') as file:
-            data = json.load(file)
-        data.append({"action": routine_name, "time": routine_time})
-
-        with open(self.filepath, "w", encoding='utf-8') as file:
-            json.dump(data, file)
+    def add_routine(self, routine_name, routine_time, logs_autotask):
+        self.routines.append({"action": routine_name, "time": routine_time, "logs_autotask": logs_autotask})
+        self.save_routines()
 
     def del_routine(self, action, time=None):
-        with open(self.filepath, "r", encoding='utf-8') as file:
-            data = json.load(file)
-
         if time is None:
             # Delete all entries with given action
-            data = [entry for entry in data if entry["action"] != action]
+            self.routines = [entry for entry in self.routines if entry["action"] != action]
         else:
             # Find the closest timestamp for the given action
             closest_entry = None
             closest_time_diff = float('inf')
-            for entry in data:
+            for entry in self.routines:
                 if entry["action"] == action:
                     entry_time = entry["time"]
                     # Convert time strings to datetime objects for comparison
@@ -53,15 +47,17 @@ class RoutinesManager:
                         closest_entry = entry
                         closest_time_diff = time_diff
             if closest_entry:
-                data.remove(closest_entry)
+                self.routines.remove(closest_entry)
+        self.save_routines()
 
-        with open(self.filepath, "w", encoding='utf-8') as file:
-            json.dump(data, file)
-
-    def reset_routines(self):
+    def load_routines(self):
         if os.path.exists(self.filepath):
             with open(self.filepath, "r", encoding='utf-8') as file:
                 data = json.load(file)
             self.routines = data
         else:
             return []
+
+    def save_routines(self):
+        with open(self.filepath, "w", encoding='utf-8') as file:
+            json.dump(self.routines, file, indent=4)

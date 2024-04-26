@@ -2,7 +2,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "execute_action",
+		    "name": "yes",
 		    "description": "The user agree with the question asked and the model execute the proposed action",
 		    "parameters": {}
 		}
@@ -10,7 +10,7 @@
 	{
 		"type": "function",
 		"function": {
-		    "name": "do_nothing",
+		    "name": "no",
 		    "description": "The user disagree with the question asked, do nothing",
 		    "parameters": {}
 		}

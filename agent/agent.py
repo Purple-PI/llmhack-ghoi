@@ -1,20 +1,16 @@
-
-import os
 import datetime
 import json
 
-from mistralai.client import MistralClient
-from mistralai.models.chat_completion import ChatMessage
-
-from prompts.fun_prompt import classification, feedback_register, feedback_register_classification, feedback_todo, feedback_todo_classification, query
+from prompts.fun_prompt import classification, feedback_register, feedback_register_classification, feedback_todo, feedback_todo_classification, query, auto_evaluation
 from agent.routines import RoutinesManager
+from agent.logs import LogsManager
 
 class Agent:
-    def __init__(self, model_name, client, log_path):
+    def __init__(self, model_name, client, logs):
         self.client = client
         self.model_name = model_name
         self.file_path = 'data/routines.json'
-        self.log_path = log_path
+        self.logs = logs
         self.timestamp = datetime.datetime.strptime("00:00", "%H:%M")
         #load routines once a day
         self.routines = RoutinesManager(self.file_path)
@@ -58,7 +54,7 @@ class Agent:
 
     def feedback_register_classification_fn(self, action, answer):
         "STEP 5: classify user answer regarding storage of automatic task"
-        entry = {"action": action, "answer": answer}
+        entry = {"action": action, "user_input": answer}
         params = feedback_register_classification(**entry)
         response = self.api(**params)
         tool_call = response.choices[0].message.tool_calls[0]
@@ -66,8 +62,8 @@ class Agent:
     
     def auto_evaluation(self, logs_autotask, logs, action, timestamp):
         "Check if auto task should be executed."
-        entry = {"logs_autotask": logs_autotask, "logs_day": logs[-1], "action":action, "timestamp": timestamp}
-        params = feedback_register_classification(**entry)
+        entry = {"logs_autotask": logs_autotask, "logs_day": logs[-1], "action":action, "time": timestamp}
+        params = auto_evaluation(**entry)
         response = self.api(**params)
         tool_call = response.choices[0].message.tool_calls[0]
         return tool_call.function.name
@@ -82,16 +78,18 @@ class Agent:
         
     def _prediction_tick(self):
         # get logs from previous days
-        _, formatted_logs = self.get_logs()
+        logs, formatted_logs = self.logs.get_logs()
         str_timestamp = self.timestamp.strftime("%H:%M")
-        action = self.routine.tick_routine()
+        action = self.routines.tick_routine(self.timestamp)
         if action != None:
-            action_to_execute = self.auto_evaluation(logs_autotask, formatted_logs, action, str_timestamp)
+            action_to_execute = self.auto_evaluation(logs[-1], formatted_logs, action, str_timestamp)
             # check if action is do nothing keep action in the stack
             return action_to_execute
         
         action_to_execute = self.classification_fn(formatted_logs, str_timestamp)
+        print("A")
         print(action_to_execute)
+        print()
         if action_to_execute == "do_nothing":
             return ""
         output_user = self.feedback_todo_fn(formatted_logs, action_to_execute)
@@ -104,24 +102,10 @@ class Agent:
         register_action = self.feedback_register_classification_fn(action_to_execute, input_user)
         if register_action == 'yes':
             #TO UPDATE: replace parameters with the one from tools
-            self.routines.add_routine(action_to_execute, str_timestamp)
+            self.routines.add_routine(action_to_execute, str_timestamp, self.logs.data[-1])
         if execute_action == 'yes':
-            return action_to_execute
+            self.logs.add_event(str_timestamp, action_to_execute)
 
-    
-    def get_logs(self, max_num_days=3):
-        with open(self.log_path, "r", encoding='utf-8') as file:
-            data = json.load(file)
-        format_content = []
-        for day_dict_list in data[-max_num_days:]:
-            day_str_list = []
-            for day_entry in day_dict_list:
-                format_str = f"{day_entry['time']}: {day_entry['event']}"
-                day_str_list.append(format_str)
-            activity_log = "\n".join(day_str_list)
-            format_content.append(activity_log)
-        return data, format_content
-        
     def user_direct_request(self, user_input):
         resp = self.query(user_input, self.timestamp)
         # feedback routines
