@@ -24,11 +24,13 @@ def cutoff_fun(log_filepath, out_filepath, cutoff_str, max_num_days=3):
 if __name__ == "__main__":
     api_key = os.environ["MISTRAL_API_KEY"]
     model = "mistral-large-latest"
-    log_filepath = "data/logs/activitylog_uci_detailed_labour_xes9.json"
+    log_filepath = "data/logs/activitylog_uci_detailed_labour_xes8.json"
     new_log_filepath = "data/logs/log.json"
 
-    # start_time = 
-    client = MistralClient(api_key=api_key)
-    cutoff_fun(log_filepath, new_log_filepath, "7:00", max_num_days=3)
-    agent = Agent(model_name=model, client=client, log_path=new_log_filepath)
-    agent.tick("20:00")
+    for k in range(10):
+        print(f"{str(10+k)}:00")
+        client = MistralClient(api_key=api_key)
+        cutoff_fun(log_filepath, new_log_filepath, f"{str(10+k)}:00", max_num_days=3)
+        agent = Agent(model_name=model, client=client, log_path=new_log_filepath)
+        agent.tick(f"{str(10+k)}:00")
+        

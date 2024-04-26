@@ -28,7 +28,6 @@ class Agent:
         entry = {"logs_pp_day": logs[-3], "logs_p_day": logs[-2], "logs_day": logs[-1], "time": time}
         params = classification(**entry)
         response = self.api(**params)
-        print(response)
         if response.choices[0].message.tool_calls:
             tool_call = response.choices[0].message.tool_calls[0]
             return tool_call.function.name
@@ -86,9 +85,9 @@ class Agent:
         _, formatted_logs = self.get_logs()
         str_timestamp = self.timestamp.strftime("%H:%M")
         action_to_execute = self.classification_fn(formatted_logs, str_timestamp)
+        print(action_to_execute)
         if action_to_execute == "do_nothing":
             return ""
-        print(action_to_execute)
         output_user = self.feedback_todo_fn(formatted_logs, action_to_execute)
         print(output_user)
         input_user = input('Answer: ')

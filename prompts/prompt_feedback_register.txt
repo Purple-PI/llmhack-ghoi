@@ -3,4 +3,6 @@ A user lives in a home and has been observed through a smart home system. Below 
 
 You previously asked the user if she/he wants you to trigger the following action: {action}.
 Now, you have to ask the user if the user wants you to do this action autonomously next time it seems relevant.
+You tell him: {output}
+He answers you: {user_input}
 Generate directly what the smart home system ask to the user.

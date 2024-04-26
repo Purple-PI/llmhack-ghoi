@@ -21,6 +21,6 @@ Here is the set of possible action:
 -read_news: read last news to the user.
 -order_food: order food to the user.
 -play music: play music for the user.
--bring_book_to_user: bring a book to the user.
+-nothing: you wait and let the user enjoy the moment.
 
-Don't comment, don't justify, only write the needed function.
+Don't comment, don't justify, only write the needed function. Suggest an action only if it is relevant, don't suggest something the user already did recently.

@@ -42,7 +42,7 @@
         },
         {
             "event": "prepareCoffee",
-            "time": "11:14",
+            "time": "11:16",
             "lifecycle": "run"
         },
         {
@@ -61,12 +61,12 @@
             "lifecycle": "complete"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "11:22",
             "lifecycle": "start"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "13:56",
             "lifecycle": "complete"
         },
@@ -151,12 +151,12 @@
             "lifecycle": "complete"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "18:15",
             "lifecycle": "start"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "19:23",
             "lifecycle": "complete"
         },
@@ -201,12 +201,12 @@
             "lifecycle": "complete"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "23:20",
             "lifecycle": "start"
         },
         {
-            "event": "listeningMusic",
+            "event": "watchingtv",
             "time": "01:32",
             "lifecycle": "complete"
         },
@@ -256,11 +256,6 @@
             "event": "prepareBreakfast",
             "time": "11:25",
             "lifecycle": "start"
-        },
-        {
-            "event": "prepareCoffee",
-            "time": "11:26",
-            "lifecycle": "run"
         },
         {
             "event": "prepareBreakfast",
@@ -318,12 +313,12 @@
             "lifecycle": "complete"
         },
         {
-            "event": "watchingtv",
+            "event": "listeningMusic",
             "time": "22:14",
             "lifecycle": "start"
         },
         {
-            "event": "watchingtv",
+            "event": "listeningMusic",
             "time": "23:12",
             "lifecycle": "complete"
         },
@@ -363,5 +358,46 @@
             "lifecycle": "start"
         }
     ],
-    []
+    [
+        {
+            "event": "sleeping",
+            "time": "10:49",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "toilet",
+            "time": "10:51",
+            "lifecycle": "start"
+        },
+        {
+            "event": "toilet",
+            "time": "10:52",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "washing",
+            "time": "10:52",
+            "lifecycle": "start"
+        },
+        {
+            "event": "washing",
+            "time": "10:52",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "shower",
+            "time": "10:54",
+            "lifecycle": "start"
+        },
+        {
+            "event": "shower",
+            "time": "10:58",
+            "lifecycle": "complete"
+        },
+        {
+            "event": "prepareBreakfast",
+            "time": "11:00",
+            "lifecycle": "start"
+        }
+    ]
 ]
